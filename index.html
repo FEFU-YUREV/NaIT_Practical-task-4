@@ -1,124 +1,225 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ноутбуки — главная</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ноутбуки — главная</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="css/mdb.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Минимальные пользовательские стили для сохранения вашего дизайна */
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Градиент для карточек, чтобы было как в оригинале */
+        .custom-gradient {
+            background: linear-gradient(180deg, #fafafa, #f5f5f7);
+        }
+
+        /* Фикс для высоты картинок в галерее, чтобы они были ровными */
+        .gallery-img-tall {
+            height: 100%;
+            min-height: 400px; /* Минимальная высота для мобилок */
+            object-fit: cover; /* Чтобы картинка не сплющилась */
+        }
+        .gallery-img-mid {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Стилизация карточек */
+        .laptop-card {
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .laptop-card:hover {
+            transform: translateY(-5px); /* Легкое всплытие при наведении */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Адаптация текста */
+        .card-text-small {
+            font-size: 0.9rem;
+            color: #333;
+        }
+    </style>
 </head>
+
 <body>
 
-  <nav class="topnav">
-    <ul class="topnav__list">
-      <li class="topnav__item topnav__item--active"><a href="#">Главная</a></li>
-      <li class="topnav__item"><a href="data.html">Сравнительная таблица</a></li>
-    </ul>
-  </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand fw-bold" href="#">Лёгкие ноуты, тяжёлые аргументы</a>
 
-  <div class="brandbar">
-    <div class="brandbar__inner">
-      <span class="brandbar__logo">Лёгкие ноуты, тяжёлые аргументы</span>
-      <div class="brandbar__search">
-        <input type="text" placeholder="Поиск по сайту">
-        <button type="button">Найти</button>
-      </div>
-    </div>
-  </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <main class="page">
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Сравнительная таблица</a>
+                        </li>
+                    </ul>
 
-    <div class="gallery">
-      <div class="column column-tall">
-        <div class="cell">
-          <a href="laptop.html">
-            <img src="images/ROG_Zephyrus.jpeg" alt="Фото 1">
-          </a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid w-90 mt-4" style="width: 95%; max-width: 1400px;">
+        
+        <div class="row g-3 mb-5">
+            
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="bg-image hover-overlay ripple rounded shadow-sm h-100" data-mdb-ripple-color="light">
+                    <img src="images/ROG_Zephyrus.jpeg" class="w-100 gallery-img-tall" alt="ROG Zephyrus">
+                    <a href="laptop.html">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 d-flex flex-column gap-3">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded shadow-sm">
+                    <img src="images/XPS_13.jpg" class="w-100 gallery-img-mid" alt="XPS 13">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <p class="text-white mb-0 fw-bold">XPS 13</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-image hover-overlay hover-zoom ripple rounded shadow-sm">
+                    <img src="images/HP_Spectre_x360.jpeg" class="w-100 gallery-img-mid" alt="HP Spectre">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 d-flex flex-column gap-3">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded shadow-sm">
+                    <img src="images/MSI_Stealth_16_Studio.jpeg" class="w-100 gallery-img-mid" alt="MSI Stealth">
+                    <a href="#!">
+                        <div class="mask" style="background-color: hsla(195, 83%, 58%, 0.2)"></div>
+                    </a>
+                </div>
+                <div class="bg-image hover-overlay hover-zoom ripple rounded shadow-sm">
+                    <img src="images/Microsoft-Surface-Laptop-Studio.jpeg" class="w-100 gallery-img-mid" alt="Surface Studio">
+                    <a href="#!">
+                        <div class="mask" style="background-color: hsla(263, 88%, 45%, 0.2)"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="bg-image hover-overlay ripple rounded shadow-sm h-100" data-mdb-ripple-color="light">
+                    <img src="images/Alienware_Area_51m_R2.jpeg" class="w-100 gallery-img-tall" alt="Alienware">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="column column-mid">
-        <div class="cell">
-          <img src="images/XPS_13.jpg" alt="Фото 2">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center mb-5">
+            
+            <div class="col-lg-2">
+                <div class="card h-100 laptop-card custom-gradient text-center p-3">
+                    <img src="images/Macbook_Air.jpeg" class="mx-auto d-block" style="height: 80px; width: auto; object-fit: contain;" alt="Air">
+                    <div class="card-body p-1">
+                        <h6 class="card-title mt-2">Air M4</h6>
+                        <p class="card-text card-text-small">Тонкие и лёгкие для учёбы.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card h-100 laptop-card custom-gradient text-center p-3">
+                    <img src="images/ROG_Zephyrus_1.jpeg" class="mx-auto d-block" style="height: 80px; width: auto; object-fit: contain;" alt="ROG">
+                    <div class="card-body p-1">
+                        <h6 class="card-title mt-2">Серии ROG</h6>
+                        <p class="card-text card-text-small">Высокая частота кадров и охлаждение.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3">
+                <div class="card h-100 laptop-card custom-gradient text-center p-3">
+                    <img src="images/Samsung_Galaxy_Book4_Ultra.jpeg" class="mx-auto d-block" style="height: 80px; width: auto; object-fit: contain;" alt="Samsung">
+                    <div class="card-body p-1">
+                        <h6 class="card-title mt-2">Galaxy Creative</h6>
+                        <p class="card-text card-text-small">Яркие OLED‑экраны.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="card h-100 laptop-card custom-gradient text-center p-3">
+                    <img src="images/Huawei_Matebook_X_Pro.png" class="mx-auto d-block" style="height: 80px; width: auto; object-fit: contain;" alt="Huawei">
+                    <div class="card-body p-1">
+                        <h6 class="card-title mt-2">Matebook X Pro</h6>
+                        <p class="card-text card-text-small">День работы без розетки.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cell">
-          <img src="images/HP_Spectre_x360.jpeg" alt="Фото 3">
+
+        <div class="row g-4 align-items-end mb-5">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card laptop-card custom-gradient text-center p-3 h-100">
+                    <img src="images/Lenovo_ThinkPad_X1.jpg" class="mx-auto d-block mb-2" style="height: 100px; object-fit: contain;" alt="ThinkPad">
+                    <h6 class="card-title">ThinkPad</h6>
+                    <p class="card-text card-text-small">Премиальные карбоновые ноутбуки для профи.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="p-4 border rounded-4 custom-gradient shadow-sm">
+                    <h2 class="text-center mb-3">MacBook Pro M4</h2>
+                    <p class="card-text-small text-justify">Модель сочетает базовый чип M4, быструю LPDDR5‑память и 120 Гц экран. Плавный интерфейс для IDE и браузера. Вес 1,55 кг, батарея 72,4 Вт⋅ч. Цена от $1599.</p>
+                    <div class="text-center my-3">
+                        <img src="images/Macbook_Pro.png" class="img-fluid rounded" style="max-height: 250px;" alt="Macbook Pro">
+                    </div>
+                    <div class="text-end">
+                        <a href="#" class="text-dark text-decoration-none fw-bold">Подробнее <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card laptop-card custom-gradient text-center p-3 h-100">
+                    <img src="images/ROG_Zephyrus_2.jpeg" class="mx-auto d-block mb-2" style="height: 100px; object-fit: contain;" alt="ROG">
+                    <h6 class="card-title">ROG Zephyrus</h6>
+                    <p class="card-text card-text-small">Тонкие и мощные модели для геймеров.</p>
+                </div>
+            </div>
+
         </div>
-      </div>
 
-      <div class="column column-mid">
-        <div class="cell">
-          <img src="images/MSI_Stealth_16_Studio.jpeg" alt="Фото 4">
-        </div>
-        <div class="cell">
-          <img src="images/Microsoft-Surface-Laptop-Studio.jpeg" alt="Фото 5">
-        </div>
-      </div>
+    </main>
 
-      <div class="column column-tall">
-        <div class="cell">
-          <img src="images/Alienware_Area_51m_R2.jpeg" alt="Фото 6">
-        </div>
-      </div>
-    </div>
+    <footer class="bg-light text-center py-4 border-top mt-auto">
+        <p class="m-0 text-muted">© 2025 • Б9123-09.03.04(5) • Юрьев А.П.</p>
+    </footer>
 
-    <div class="cards cards--top">
-      <article class="card card--narrow">
-        <img class="card__pic" src="images/Macbook_Air.jpeg" alt="Мини">
-        <h3 class="card__title">Новая линейка Air M4</h3>
-        <p class="card__text">Тонкие и лёгкие модели для учёбы и работы.</p>
-      </article>
-
-      <article class="card card--wide">
-        <img class="card__pic" src="images/ROG_Zephyrus_1.jpeg" alt="Мини">
-        <h3 class="card__title">Игровые серии ROG</h3>
-        <p class="card__text">Высокая частота кадров и охлаждение.</p>
-      </article>
-
-      <div class="cards__spacer" aria-hidden="true"></div>
-
-      <article class="card card--wide">
-        <img class="card__pic" src="images/Samsung_Galaxy_Book4_Ultra.jpeg" alt="Мини">
-        <h3 class="card__title">Для креатива Galaxy</h3>
-        <p class="card__text">Яркие OLED‑экраны и точная цветопередача.</p>
-      </article>
-
-      <article class="card card--narrow">
-        <img class="card__pic" src="images/Huawei_Matebook_X_Pro.png" alt="Мини">
-        <h3 class="card__title">Автономность Mateboox X Pro</h3>
-        <p class="card__text">До целого дня работы без розетки.</p>
-      </article>
-    </div>
-
-    <div class="feature-row">
-      <article class="card card--side">
-        <img class="card__pic" src="images/Lenovo_ThinkPad_X1.jpg" alt="Мини">
-        <h3 class="card__title">Легендарный ThinkPad</h3>
-        <p class="card__text">Премиальные карбоновые ноутбуки профессионалов и руководителей.
-        </p>
-      </article>
-
-      <div class="feature">
-        <h2 class="feature__title">MacBook Pro M4</h2>
-        <p>Модель сочетает базовый чип M4, быструю LPDDR5‑память и 120 Гц экран, что делает интерфейс и прокрутку плавными и комфортными при работе IDE/браузера, монтаже и графике начально‑среднего уровня. При весе 1,55 кг и батарее 72,4 Вт⋅ч ноутбук рассчитан на длительную работу без розетки и мобильное использование. Базовая конфигурация поставляется с 16 ГБ унифицированной памяти и SSD 512 ГБ по цене $1599.</p>
-        <div class="feature__image">
-          <img src="images/Macbook_Pro.png" alt="Широкое изображение">
-        </div>
-        <a class="feature__more" href="#">Подробнее&gt;</a>
-      </div>
-
-      <article class="card card--side">
-        <img class="card__pic" src="images/ROG_Zephyrus_2.jpeg" alt="Мини">
-        <h3 class="card__title">Игровая линейка ROG Zephyrus</h3>
-        <p class="card__text">Тонкие и мощные модели для геймеров и создателей контента.
-        </p>
-      </article>
-    </div>
-
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 • Б9123-09.03.04(5) • Юрьев А.П.</p>
-  </footer>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
