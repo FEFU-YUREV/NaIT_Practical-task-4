@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ноутбуки — главная</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/mdb.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .img-tall {
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+        .img-mid {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Ноутбуки</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Таблица</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex input-group w-auto">
+                        <input type="search" class="form-control rounded" placeholder="Поиск..." aria-label="Search" />
+                        <button class="btn btn-outline-dark" type="button" data-mdb-ripple-color="dark">
+                            Найти
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        
+        <div class="row g-3 mb-5">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded h-100" data-mdb-ripple-color="light">
+                    <img src="images/ROG_Zephyrus.jpeg" class="w-100 img-tall" alt="ROG">
+                    <a href="laptop.html">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column gap-3">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded">
+                    <img src="images/XPS_13.jpg" class="img-mid" alt="XPS">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                    </a>
+                </div>
+                <div class="bg-image hover-overlay hover-zoom ripple rounded">
+                    <img src="images/HP_Spectre_x360.jpeg" class="img-mid" alt="HP">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column gap-3">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded">
+                    <img src="images/MSI_Stealth_16_Studio.jpeg" class="img-mid" alt="MSI">
+                    <a href="#!">
+                        <div class="mask" style="background-color: hsla(195, 83%, 58%, 0.2)"></div>
+                    </a>
+                </div>
+                <div class="bg-image hover-overlay hover-zoom ripple rounded">
+                    <img src="images/Microsoft-Surface-Laptop-Studio.jpeg" class="img-mid" alt="Surface">
+                    <a href="#!">
+                        <div class="mask" style="background-color: hsla(263, 88%, 45%, 0.2)"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded h-100" data-mdb-ripple-color="light">
+                    <img src="images/Alienware_Area_51m_R2.jpeg" class="w-100 img-tall" alt="Alienware">
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5 justify-content-center">
+            
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="card h-100 text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/Macbook_Air.jpeg" class="img-fluid mb-2" style="height: 60px; object-fit: contain;" alt="Air">
+                        <h6 class="card-title">Air M4</h6>
+                        <small class="text-muted">Для учёбы</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card h-100 text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/ROG_Zephyrus_1.jpeg" class="img-fluid mb-2" style="height: 60px; object-fit: contain;" alt="ROG">
+                        <h6 class="card-title">Серии ROG</h6>
+                        <small class="text-muted">Высокая частота кадров</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="card h-100 text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/Samsung_Galaxy_Book4_Ultra.jpeg" class="img-fluid mb-2" style="height: 60px; object-fit: contain;" alt="Samsung">
+                        <h6 class="card-title">Galaxy Creative</h6>
+                        <small class="text-muted">OLED‑экраны</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="card h-100 text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/Huawei_Matebook_X_Pro.png" class="img-fluid mb-2" style="height: 60px; object-fit: contain;" alt="Huawei">
+                        <h6 class="card-title">Matebook X</h6>
+                        <small class="text-muted">Автономность</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-end mb-5">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/Lenovo_ThinkPad_X1.jpg" class="img-fluid mb-3" style="height: 80px; object-fit: contain;" alt="ThinkPad">
+                        <h6>ThinkPad</h6>
+                        <small>Для профессионалов</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="p-4 border rounded">
+                    <h3 class="text-center">MacBook Pro M4</h3>
+                    <p class="small text-justify mt-3">
+                        Модель сочетает базовый чип M4 и 120 Гц экран. Идеально для работы в браузере и монтажа. Вес всего 1,55 кг.
+                    </p>
+                    <div class="text-center ripple" data-mdb-ripple-color="light">
+                        <img src="images/Macbook_Pro.png" class="img-fluid rounded" style="max-height: 200px;" alt="Macbook">
+                    </div>
+                    <div class="text-end mt-3">
+                        <button type="button" class="btn btn-link px-3 ripple-surface-dark">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center border hover-shadow">
+                    <div class="card-body">
+                        <img src="images/ROG_Zephyrus_2.jpeg" class="img-fluid mb-3" style="height: 80px; object-fit: contain;" alt="ROG">
+                        <h6>ROG Zephyrus</h6>
+                        <small>Для геймеров</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-light text-center py-3 border-top">
+        <p class="m-0 text-muted small">© 2025 • Б9123-09.03.04(5) • Юрьев А.П.</p>
+    </footer>
+
+</body>
+</html>
